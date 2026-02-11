@@ -1,0 +1,140 @@
+.hero-para{
+        height: 800px;
+        background-image: url(hero.jpeg);
+        background-size: cover;
+        background-position: center 0px;
+        background-attachment: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+#hamburger {
+    font-size: 28px;
+    padding: 15px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 1001;
+    color: black;
+}
+
+.sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: #222;
+    list-style: none;
+    padding-top: 60px;
+    transition: 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar li {
+    padding: 15px 20px;
+    color: white;
+    cursor: pointer;
+    border-bottom: 1px solid #333;
+}
+
+.sidebar li:hover {
+    background: #444;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#projects ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#projects li {
+    background: #f4f4f4;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+#projects li:hover {
+    transform: scale(1.05);
+}
+
+
+form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    background: #333;
+    color: white;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #555;
+}
+
+
+.dark {
+    background: #121212;
+    color: white;
+}
+
+.dark section {
+    background: #1e1e1e;
+}
+
+.dark #projects li {
+    background: #333;
+}
+
+.dark button {
+    background: #555;
+}
+
+.dark button:hover {
+    background: #777;
+}
+
+
+@media (max-width: 768px) {
+    #projects ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-para {
+        font-size: 2rem;
+        text-align: center;
+        padding: 20px;
+    }
+}
