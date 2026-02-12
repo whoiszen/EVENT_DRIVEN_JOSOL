@@ -1,3 +1,4 @@
+//Parallax image
 const hero = document.getElementById("hero");
 
 window.addEventListener("scroll", ()=> {
@@ -8,15 +9,7 @@ window.addEventListener("scroll", ()=> {
     hero.style.backgroundPosition = `center ${yPos}px`;
 });
 
-const projects = document.getElementById("projects");
-projects.addEventListener('mouseover', () => {
-    projects.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
-});
-projects.addEventListener('mouseout', () => {
-    projects.style.backgroundColor = "";
-});
-
-    
+//Light and Dark mode wow duha
 const darkBtn = document.getElementById("darkmode");
 const lightBtn = document.getElementById("lightmode");
 
@@ -28,6 +21,8 @@ lightBtn.addEventListener("click", () => {
     document.body.classList.remove("dark");
 });
 
+
+//sa Sidebar ni
 const hamburger = document.getElementById("hamburger");
 const sidebar = document.getElementById("sidebar");
 
@@ -35,9 +30,13 @@ hamburger.addEventListener("click", () => {
     sidebar.classList.toggle("active");
 });
 
-
 document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
+
+    if (event.key === "Escape" || event.key.toLowerCase() === "c") {
         sidebar.classList.remove("active");
+    }
+
+    if (event.key.toLowerCase() === "o") {
+        sidebar.classList.add("active");
     }
 });
